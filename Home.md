@@ -1,8 +1,10 @@
 # Bienvenue dans le wiki du projet M.A.R.K ! 
 img ?
-Ici vous trouverez le nécessaire pour programmer et customiser votre robot. 
-## Pour bien commencer 
-cf : [README.md] 
+Ici vous trouverez le nécessaire pour programmer et customiser votre robot. <br />
+
+## Pour bien commencer 
+cf : [README.md](https://github.com/generationrobots-lab/MARK/blob/master/README.md)
+
 ## Software
 bla bla bla bla bla.
 ### La librairie M.A.R.K
