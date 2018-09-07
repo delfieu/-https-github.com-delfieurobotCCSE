@@ -1,10 +1,10 @@
 # M.A.R.K : la librairie ! 
 ## Les fonctions
 
-* [MARK(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie/_edit#markvoid)
-* [~MARK(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie/_edit#markvoid-1)
-* [begin()](https://github.com/generationrobots-lab/MARK/wiki/Librairie/_edit#begin)
-* [setLeftMotor(int _speed)](https://github.com/generationrobots-lab/MARK/wiki/Librairie/_edit#setleftmotorint-_speed)
+* [MARK(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#markvoid)
+* [~MARK(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie/#markvoid-1)
+* [begin()](https://github.com/generationrobots-lab/MARK/wiki/Librairie/#begin)
+* [setLeftMotor(int _speed)](https://github.com/generationrobots-lab/MARK/wiki/Librairie/#setleftmotorint-_speed)
 
 ---
 
