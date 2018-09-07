@@ -2,12 +2,12 @@
 ## Les fonctions
 Général  : <br />
 * [MARK(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#markvoid)
-* [~MARK(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie/#markvoid-1) 
+* [~MARK(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#markvoid-1) 
 
 Moteurs : <br />
 
-* [begin()](https://github.com/generationrobots-lab/MARK/wiki/Librairie/#begin)
-* [setLeftMotor(int _speed)](https://github.com/generationrobots-lab/MARK/wiki/Librairie/#setleftmotorint-_speed)
+* [begin()](https://github.com/generationrobots-lab/MARK/wiki/Librairie#begin)
+* [setLeftMotor(int _speed)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setleftmotorint-_speed)
 * [setRightMotor(int _speed)]()
 * [stopLeftMotor()]()
 * [stopRightMotor()]()
