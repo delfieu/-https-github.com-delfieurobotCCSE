@@ -21,6 +21,6 @@ Vous pouvez également programmer votre Arduino Mega de A à Z; comme vous le so
 ### Électronique <br />
 M.A.R.K est un robot qui se veut modulable, pour cela son électronique se base un maximum sur un maximum de capteur GROVE, qui facilite la connectique et permet la réalisation simple de prototypes. 
 
-Pour avoir plus d'information sur le câblage du robot, merci de visiter la page "ELECTRONIQUE"
+Pour avoir plus d'informations sur le câblage du robot, merci de visiter la page "ELECTRONIQUE"
 ### Mécanique
-Pour avoir plus d'information sur le câblage du robot, merci de visiter la page "MECANIQUE"
+Pour avoir plus d'informations sur le câblage du robot, merci de visiter la page "MECANIQUE"
