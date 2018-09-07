@@ -22,14 +22,6 @@ MARK myrobot; //initialize an instance of the class
 
 #### ~MARK(void)
 Desctructeur
-##### exemple : 
-
-```c++
-#include <MARK.h>
-
-MARK myrobot; //initialize an instance of the class
-```
-
 
 ---
 
