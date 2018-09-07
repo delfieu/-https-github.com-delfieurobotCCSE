@@ -3,7 +3,6 @@
 Général  : <br />
 * [MARK(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#markvoid)
 * [~MARK(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie/#markvoid-1) 
-<br />
 
 Moteurs : <br />
 
