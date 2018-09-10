@@ -54,7 +54,7 @@ Joystick :
 
 Servomoteur : 
 
-* [setServo(int pos)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setservointpos)
+* [setServo(int pos)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setservoint-pos)
 * [getServo(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getservovoid)
 
 Accéléromètre : 
@@ -736,86 +736,208 @@ Positionne le servo à un angle donnée.
 Aucune.
 ##### Exemple : 
 ```c++
+#include <MARK.h>
+
+MARK myrobot; 
+
+void setup() {
+  myrobot.begin();
+} 
+
+void loop() {
+myrobot.setServo(0);
+delay(1000);
+myrobot.setServo(80);
+delay(1000);
+myrobot.setServo(160);
+delay(1000);
+myrobot.setServo(80);
+delay(1000);
+}
 ```
 
 ---
 
 #### getServo(void)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+Retourne la dernière valeur utilisée pour la fonction setServo().
 ##### Paramètres : 
+Aucun.
 ##### Valeur de retour : 
-##### Exemple : 
-```c++
-```
+int : la dernière valeur utilisée pour la fonction setServo().
 
 ---
 
 #### getAccelX(void)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+Retourne la valeur de l’accéléromètre sur l'axe X.
 ##### Paramètres : 
+Aucun.
 ##### Valeur de retour : 
+float : entre -1 et 1
 ##### Exemple : 
 ```c++
+#include <MARK.h>
+
+MARK myrobot; 
+
+void setup() {
+  myrobot.begin();
+} 
+
+void loop() {
+  myrobot.setLcdCursor(0, 0);
+  myrobot.lcdPrint(myrobot.getAccelX());
+  myrobot.lcdPrint("   ");
+}
 ```
 
 ---
 
 #### getAccelY(void)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+Retourne la valeur de l’accéléromètre sur l'axe Y.
 ##### Paramètres : 
+Aucun.
 ##### Valeur de retour : 
+float : entre -1 et 1
 ##### Exemple : 
 ```c++
+#include <MARK.h>
+
+MARK myrobot; 
+
+void setup() {
+  myrobot.begin();
+} 
+
+void loop() {
+  myrobot.setLcdCursor(0, 0);
+  myrobot.lcdPrint(myrobot.getAccelY());
+  myrobot.lcdPrint("   ");
+}
 ```
 
 ---
 
 #### getAccelZ(void)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+Retourne la valeur de l’accéléromètre sur l'axe Z.
 ##### Paramètres : 
+Aucun.
 ##### Valeur de retour : 
+float : entre -1 et 1
 ##### Exemple : 
 ```c++
+#include <MARK.h>
+
+MARK myrobot; 
+
+void setup() {
+  myrobot.begin();
+} 
+
+void loop() {
+  myrobot.setLcdCursor(0, 0);
+  myrobot.lcdPrint(myrobot.getAccelZ());
+  myrobot.lcdPrint("   ");
+}
 ```
 
 ---
 
 ####  getGyroX(void)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+Retourne la valeur du gyroscope sur l'axe X.
 ##### Paramètres : 
+Aucun.
 ##### Valeur de retour : 
+float : entre -1 et 1
 ##### Exemple :  
 ```c++
+#include <MARK.h>
+
+MARK myrobot; 
+
+void setup() {
+  myrobot.begin();
+} 
+
+void loop() {
+  myrobot.setLcdCursor(0, 0);
+  myrobot.lcdPrint(myrobot.getGyroX());
+  myrobot.lcdPrint("   ");
+}
 ```
 
 ---
 
 #### getGyroY(void)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+Retourne la valeur du gyroscope sur l'axe Y.
 ##### Paramètres : 
+Aucun.
 ##### Valeur de retour : 
+float : entre -1 et 1
 ##### Exemple : 
 ```c++
+#include <MARK.h>
+
+MARK myrobot; 
+
+void setup() {
+  myrobot.begin();
+} 
+
+void loop() {
+  myrobot.setLcdCursor(0, 0);
+  myrobot.lcdPrint(myrobot.getGyroY());
+  myrobot.lcdPrint("   ");
+}
 ```
 
 ---
 
 #### getGyroZ(void)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+Retourne la valeur du gyroscope sur l'axe Z.
 ##### Paramètres : 
+Aucun.
 ##### Valeur de retour : 
+float : entre -1 et 1
 ##### Exemple : 
 ```c++
+#include <MARK.h>
+
+MARK myrobot; 
+
+void setup() {
+  myrobot.begin();
+} 
+
+void loop() {
+  myrobot.setLcdCursor(0, 0);
+  myrobot.lcdPrint(myrobot.getGyroZ());
+  myrobot.lcdPrint("   ");
+}
 ```
 
 ---
 
 #### getTemp(void)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+Retourne la température. 
 ##### Paramètres : 
+Aucun.
 ##### Valeur de retour : 
+float : retourne la température. 
 ##### Exemple : 
 ```c++
+#include <MARK.h>
+
+MARK myrobot; 
+
+void setup() {
+  myrobot.begin();
+} 
+
+void loop() {
+  myrobot.setLcdCursor(0, 0);
+  myrobot.lcdPrint(myrobot.getTemp());
+  myrobot.lcdPrint("   ");
+}
 ```
 
 ---
@@ -823,6 +945,7 @@ configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
 #### sendWifiCmd(char *cmd)
 configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
 ##### Paramètres : 
+
 ##### Valeur de retour : 
 ##### Exemple : 
 ```c++
