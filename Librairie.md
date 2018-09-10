@@ -24,8 +24,8 @@ LCD RGB :
 
 Barre de leds : 
 
-* [setLedBarLevel(int level)]()
-* [getLedBarLevel(void)]()
+* [setLedBarLevel(int level)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setledbarlevelint-level)
+* [getLedBarLevel(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getledbarlevelvoid)
 
 Capteur de réflectance infrarouge : 
 
@@ -54,7 +54,7 @@ Joystick :
 
 Servomoteur : 
 
-* [setServo(int)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setservoint)
+* [setServo(int pos)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setservointpos)
 * [getServo(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getservovoid)
 
 Accéléromètre : 
@@ -251,7 +251,9 @@ void loop() {
 #### setLcdRGB(unsigned char r, unsigned char g, unsigned char b)
 configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
 ##### Paramètres : 
-- r : valeur de la composante rouge (entre 0 et 255).
+- (unsigned char) r : valeur de la composante rouge (entre 0 et 255).
+- (unsigned char) g : valeur de la composante rouge (entre 0 et 255).
+- (unsigned char) b : valeur de la composante rouge (entre 0 et 255).
 ##### Valeur de retour : 
 ##### Exemple : 
 ```c++
@@ -415,22 +417,38 @@ void loop() {
 ---
 
 #### setLedBarLevel(int level)
-
+Allume la barre de led. 
 ##### Paramètres : 
+* level : le niveau de la barre de led (0 => éteint, 10 => tout est allumé) (type int).
 ##### Valeur de retour : 
+Aucune.
 ##### Exemple : 
 ```c++
+#include <MARK.h>
+
+MARK myrobot; 
+
+void setup() {
+  myrobot.begin();
+}
+
+void loop() {
+  for(int i=0; i<=10;i++){
+     myrobot.setLedBarLevel(i);
+     delay(500);
+  }    
+}
+
 ```
 
 ---
 
 #### getLedBarLevel(void)
-
+Retourne la dernière valeur appelé avec la fonction setLedBarLevel(int level).
 ##### Paramètres : 
+Aucun.
 ##### Valeur de retour : 
-##### Exemple : 
-```c++
-```
+int : valeur entre 0 et 10.
 
 ---
 
@@ -515,90 +533,207 @@ void loop() {
 
 ---
 
-#### getUsDist(String _pos)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+#### getUsDist(String pos)
+Retourne la distance devant un ultrason.
 ##### Paramètres : 
+* (String) pos : permet d'identifier sur quel ultrason la mesure doit être faite. 
 ##### Valeur de retour : 
+int : valeur en centimètre. 
 ##### Exemple : 
 ```c++
+#include <MARK.h>
+
+MARK myrobot; 
+
+void setup() {
+  myrobot.begin();
+}
+
+void loop() {
+  myrobot.lcdClear();
+  myrobot.setLcdCursor(0,0);
+  myrobot.lcdPrint(myrobot.getUsDist("front")); 
+  myrobot.setLcdCursor(0,1);
+  myrobot.lcdPrint(myrobot.getUsDist("back")); 
+  delay(1000);
+}
 ```
 
 ---
 
-#### setLeftMotor(int _speed)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+#### getBumper(String side)
+Retourne la valeur d'un microswitch
 ##### Paramètres : 
+* (String) side : permet d'identifier sur quel bumper la mesure doit être faite. 
 ##### Valeur de retour : 
+bool : égale à 1 si le contact en présent (switch fermé).
 ##### Exemple : 
 ```c++
-```
+#include <MARK.h>
 
----
+MARK myrobot; 
 
-#### getBumper(String _side)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
-##### Paramètres : 
-##### Valeur de retour : 
-##### Exemple : 
-```c++
+void setup() {
+  myrobot.begin();
+}
+
+void loop() {
+  myrobot.setLcdCursor(0,0);
+  myrobot.lcdPrint(myrobot.getBumper("right")); 
+  myrobot.setLcdCursor(0,1);
+  myrobot.lcdPrint(myrobot.getBumper("left")); 
+  delay(100);
+}
 ```
 
 ---
 
 #### getInterruptFlag(void)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+Retourne l'état de l'interruption.
 ##### Paramètres : 
+Aucun.
 ##### Valeur de retour : 
+bool : égale à 1 si un bumper a changé d'état
 ##### Exemple : 
 ```c++
+#include <MARK.h>
+
+MARK myrobot; 
+
+void setup() {
+  myrobot.begin();
+   myrobot.setRightMotor(50);
+  myrobot.setLeftMotor(50);
+}
+
+void loop() {
+if(myrobot.getInterruptFlag()){
+  myrobot.stopLeftMotor();
+  myrobot.stopRightMotor();
+  }
+}
 ```
 
 ---
 
 #### resetInterruptFlag(void)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+Réinitialise l'état de l'interruption.
 ##### Paramètres : 
+Aucun.
 ##### Valeur de retour : 
+Aucune.
 ##### Exemple :  
 ```c++
-```
+#include <MARK.h>
 
----
+MARK myrobot; 
 
-#### getJoystickY(void)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
-##### Paramètres : 
-##### Valeur de retour : 
-##### Exemple :  
-```c++
+void setup() {
+  myrobot.begin();
+   myrobot.setRightMotor(50);
+  myrobot.setLeftMotor(50);
+}
+
+void loop() {
+if(myrobot.getInterruptFlag()){
+  myrobot.stopLeftMotor();
+  myrobot.stopRightMotor();
+  delay (5000);
+  myrobot.resetInterruptFlag();
+  myrobot.setRightMotor(50);
+  myrobot.setLeftMotor(50);
+  }
+}
 ```
 
 ---
 
 #### getJoystickX(void)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+Retourne la valeur sur l'axe X du joystick.
 ##### Paramètres : 
+Aucun.
 ##### Valeur de retour : 
+int : valeur sur l'axe Y (entre ~240 et ~780, 1023 si le bouton est pressé)
 ##### Exemple : 
 ```c++
+#include <MARK.h>
+
+MARK myrobot; 
+
+void setup() {
+  myrobot.begin();
+} 
+
+void loop() {
+  myrobot.lcdClear();
+  myrobot.setLcdCursor(0, 0);
+  myrobot.lcdPrint(myrobot.getJoystickX());
+  delay(200);
+}
+```
+
+---
+
+#### getJoystickY(void)
+Retourne la valeur sur l'axe Y du joystick.
+##### Paramètres : 
+Aucun.
+##### Valeur de retour : 
+int : valeur sur l'axe Y (entre ~240 et ~780)
+##### Exemple :  
+```c++
+#include <MARK.h>
+
+MARK myrobot; 
+
+void setup() {
+  myrobot.begin();
+} 
+
+void loop() {
+  myrobot.lcdClear();
+  myrobot.setLcdCursor(0, 0);
+  myrobot.lcdPrint(myrobot.getJoystickY());
+  delay(200);
+}
 ```
 
 ---
 
 #### getJoystickClic(void)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+Retourne l'état du bouton du joystick.
 ##### Paramètres : 
+Aucun.
 ##### Valeur de retour : 
+bool : égale à 1 si le bouton est pressé.
 ##### Exemple : 
 ```c++
+#include <MARK.h>
+
+MARK myrobot; 
+
+void setup() {
+  myrobot.begin();
+} 
+
+void loop() {
+  if(myrobot.getJoystickClic()){
+    myrobot.setLcdRGB(255,0,0);
+  }
+  else{
+    myrobot.setLcdRGB(0,255,255);
+  }
+}
 ```
 
 ---
 
-#### setServo(int)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+#### setServo(int pos)
+Positionne le servo à un angle donnée.
 ##### Paramètres : 
+* (int) pos : angle du servomoteur (entre 0° et 180°).
 ##### Valeur de retour : 
+Aucune.
 ##### Exemple : 
 ```c++
 ```
