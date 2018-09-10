@@ -1,4 +1,7 @@
 # M.A.R.K : la librairie ! 
+
+<span style="color:blue">some *This is Blue italic.* text</span>
+
 ## Les fonctions
 Général  : <br />
 * [MARK(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#markvoid)
