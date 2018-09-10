@@ -8,8 +8,8 @@ Général  : <br />
     
 Moteurs :
 
-* [setLeftMotor(int _speed)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setleftmotorint-speed)
-* [setRightMotor(int _speed)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setrightmotorint-speed)
+* [setLeftMotor(int speed)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setleftmotorint-speed)
+* [setRightMotor(int speed)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setrightmotorint-speed)
 * [stopLeftMotor(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#stopleftmotorvoid)
 * [stopRightMotor(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#stoprightmotorvoid)
 
@@ -38,11 +38,11 @@ Diviseur de tension :
 
 Ultrason : 
 
-* [getUsDist(String _pos)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getusdiststring-pos)
+* [getUsDist(String pos)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getusdiststring-pos)
 
 Capteur de contact : 
 
-* [getBumper(String _side)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getbumperstring-side)
+* [getBumper(String side)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getbumperstring-side)
 * [getInterruptFlag(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getinterruptflagvoid)
 * [resetInterruptFlag(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#resetinterruptflagvoid)
 
@@ -75,8 +75,8 @@ Wifi :
 
 Encodeurs : 
 
-* [getEncoder(String _side)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getencoderstring-side)
-* [resetEncoder(String _side)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#resetencoderstring-side)
+* [getEncoder(String side)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getencoderstring-side)
+* [resetEncoder(String side)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#resetencoderstring-side)
 
 ---
 
