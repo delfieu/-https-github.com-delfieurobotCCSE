@@ -6,23 +6,22 @@ Général  : <br />
 
 Moteurs : <br />
 
-* [begin()](https://github.com/generationrobots-lab/MARK/wiki/Librairie#begin)
+* [begin(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#begin)
 * [setLeftMotor(int _speed)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setleftmotorint-_speed)
-* [setRightMotor(int _speed)]()
-* [stopLeftMotor()]()
-* [stopRightMotor()]()
+* [setRightMotor(int _speed)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setrightmotorint-_speed)
+* [stopLeftMotor(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#stopleftmotor)
+* [stopRightMotor(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#stoprightmotor)
 
 LCD RGB : 
 
-* [setLcdRGB(unsigned char r, unsigned char g, unsigned char b)]()
-* [lcdPrint(String text)]()
-* [lcdPrint(float data)]()
-* [setLcdCursor(uint8_t, uint8_t)]()
-* [lcdHome()]()
-* [lcdClear()]()
-<!---
-* []()
-* []()
+* [setLcdRGB(unsigned char r, unsigned char g, unsigned char b)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setlcdrgbunsigned-char-r-unsigned-char-g-unsigned-char-b)
+* [lcdPrint(String text)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#lcdprintstring-text)
+* [lcdPrint(float data)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#lcdprintfloat-data)
+* [setLcdCursor(uint8_t, uint8_t)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setlcdcursoruint8_t-uint8_t)
+* [lcdHome(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#lcdhome)
+* [lcdClear(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#lcdclear)
+* [gedInfrared(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#gedinfrared)
+* [getVoltage(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getvoltagevoid)
 * []()
 * []()
 * []()
@@ -68,7 +67,7 @@ Desctructeur
 
 ---
 
-#### begin()
+#### begin(void)
 Initialisation de la classe (Serial, I2C, encodeurs etc)
 ##### exemple : 
 
@@ -104,10 +103,10 @@ void setup() {
 
 void loop() {
   myrobot.setRightMotor(50);
-  myrobot.setRightMotor(-50);
+  myrobot.setLeftMotor(-50);
   delay(1000);
-  stopLeftMotor()
-  stopRightMotor()
+  myrobot.stopLeftMotor();
+  myrobot.stopRightMotor();
   delay(1000);
 }
 
@@ -129,10 +128,10 @@ void setup() {
 
 void loop() {
   myrobot.setRightMotor(50);
-  myrobot.setRightMotor(-50);
+  myrobot.setLeftMotor(-50);
   delay(1000);
-  stopLeftMotor()
-  stopRightMotor()
+  myrobot.stopLeftMotor();
+  myrobot.stopRightMotor();
   delay(1000);
 }
 
@@ -140,7 +139,7 @@ void loop() {
 
 ---
 
-#### stopLeftMotor()
+#### stopLeftMotor(void)
 Stop le moteur gauche.
 ##### exemple : 
 ```c++
@@ -154,10 +153,10 @@ void setup() {
 
 void loop() {
   myrobot.setRightMotor(50);
-  myrobot.setRightMotor(-50);
+  myrobot.setLeftMotor(-50);
   delay(1000);
-  stopLeftMotor()
-  stopRightMotor()
+  myrobot.stopLeftMotor();
+  myrobot.stopRightMotor();
   delay(1000);
 }
 
@@ -165,9 +164,28 @@ void loop() {
 
 ---
 
-#### stopRightMotor()
+#### stopRightMotor(void)
 configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
 ##### exemple : 
+```c++
+#include <MARK.h>
+
+MARK myrobot; //initialize an instance of the class
+
+void setup() {
+  myrobot.begin();
+}
+
+void loop() {
+  myrobot.setRightMotor(50);
+  myrobot.setLeftMotor(-50);
+  delay(1000);
+  myrobot.stopLeftMotor();
+  myrobot.stopRightMotor();
+  delay(1000);
+}
+
+```
 
 ---
 
@@ -195,19 +213,19 @@ configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
 
 ---
 
-#### lcdHome()
+#### lcdHome(void)
 configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
 ##### exemple : 
 
 ---
 
-#### lcdClear()
+#### lcdClear(void)
 configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
 ##### exemple : 
 
 ---
 
-#### gedInfrared()
+#### gedInfrared(void)
 configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
 ##### exemple : 
 
@@ -243,13 +261,13 @@ configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
 
 ---
 
-#### getInterruptFlag()
+#### getInterruptFlag(void)
 configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
 ##### exemple : 
 
 ---
 
-#### resetInterruptFlag()
+#### resetInterruptFlag(void)
 configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
 ##### exemple : 
 
