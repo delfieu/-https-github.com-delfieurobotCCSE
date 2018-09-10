@@ -8,8 +8,8 @@ Général  : <br />
     
 Moteurs :
 
-* [setLeftMotor(int _speed)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setleftmotorint-_speed)
-* [setRightMotor(int _speed)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setrightmotorint-_speed)
+* [setLeftMotor(int _speed)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setleftmotorint-speed)
+* [setRightMotor(int _speed)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setrightmotorint-speed)
 * [stopLeftMotor(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#stopleftmotorvoid)
 * [stopRightMotor(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#stoprightmotorvoid)
 
@@ -38,11 +38,11 @@ Diviseur de tension :
 
 Ultrason : 
 
-* [getUsDist(String _pos)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getusdiststring-_pos)
+* [getUsDist(String _pos)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getusdiststring-pos)
 
 Capteur de contact : 
 
-* [getBumper(String _side)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getbumperstring-_side)
+* [getBumper(String _side)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getbumperstring-side)
 * [getInterruptFlag(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getinterruptflagvoid)
 * [resetInterruptFlag(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#resetinterruptflagvoid)
 
@@ -75,8 +75,8 @@ Wifi :
 
 Encodeurs : 
 
-* [getEncoder(String _side)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getencoderstring-_side)
-* [resetEncoder(String _side)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#resetencoderstring-_side)
+* [getEncoder(String _side)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getencoderstring-side)
+* [resetEncoder(String _side)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#resetencoderstring-side)
 
 ---
 
@@ -943,52 +943,112 @@ void loop() {
 ---
 
 #### sendWifiCmd(char *cmd)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+Envoie une commande au module wifi.
 ##### Paramètres : 
-
+(char) *cmd : commande à envoyer.
 ##### Valeur de retour : 
+Aucune.
 ##### Exemple : 
 ```c++
+#include <MARK.h>
+
+MARK myrobot; 
+
+void setup() {
+  myrobot.begin();
+} 
+
+void loop() {
+  myrobot.sendWifiCmd("AT+CWLAP");
+  myrobot.waitWifiResult();
+  myrobot.displayWifiAnswer();
+}
 ```
 
 ---
 
 #### waitWifiResult(void)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+fonction bloquante qui attend la réponse du module wifi.
 ##### Paramètres : 
+Aucun.
 ##### Valeur de retour : 
+Aucune.
 ##### Exemple : 
 ```c++
+#include <MARK.h>
+
+MARK myrobot; 
+
+void setup() {
+  myrobot.begin();
+} 
+
+void loop() {
+  myrobot.sendWifiCmd("AT+CWLAP");
+  myrobot.waitWifiResult();
+  myrobot.displayWifiAnswer();
+}
 ```
 
 ---
 
 #### displayWifiAnswer(void)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+Envoie sur le Serial la réponse du module wifi.
 ##### Paramètres : 
+Aucun.
 ##### Valeur de retour : 
+Aucune.
 ##### Exemple : 
 ```c++
+#include <MARK.h>
+
+MARK myrobot; 
+
+void setup() {
+  myrobot.begin();
+} 
+
+void loop() {
+  myrobot.sendWifiCmd("AT+CWLAP");
+  myrobot.waitWifiResult();
+  myrobot.displayWifiAnswer();
+}
 ```
 
 ---
 
-#### getEncoder(String _side)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+#### getEncoder(String side)
+retourne la valeur de l'encodeur choisi. 
 ##### Paramètres : 
+(String) side : côté de l'encodeur ("right" ou "left").
 ##### Valeur de retour : 
+long : nombre d'impulsions mesurées. 
 ##### Exemple : 
 ```c++
+#include <MARK.h>
+
+MARK myrobot; 
+
+void setup() {
+  myrobot.begin();
+} 
+
+void loop() {
+  myrobot.lcdClear();
+  myrobot.setLcdCursor(0, 0);
+  myrobot.lcdPrint(myrobot.getEncoder("right"));
+    myrobot.setLcdCursor(0, 1);
+  myrobot.lcdPrint(myrobot.getEncoder("left"));
+  delay(200);
+}
 ```
 
 ---
 
-#### resetEncoder(String _side)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+#### resetEncoder(String side)
+Réinitialise la valeur de l'encodeur choisi à 0.
 ##### Paramètres : 
+(String) side : côté de l'encodeur ("right" ou "left").
 ##### Valeur de retour : 
-##### Exemple : 
-```c++
-```
+Aucune.
 
----
