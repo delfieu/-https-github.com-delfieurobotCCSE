@@ -3,14 +3,14 @@
 Général  : <br />
 * [MARK(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#markvoid)
 * [~MARK(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#markvoid-1) 
+* [begin(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#beginvoid)
 
-Moteurs : <br />
+Moteurs :
 
-* [begin(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#begin)
 * [setLeftMotor(int _speed)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setleftmotorint-_speed)
 * [setRightMotor(int _speed)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setrightmotorint-_speed)
-* [stopLeftMotor(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#stopleftmotor)
-* [stopRightMotor(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#stoprightmotor)
+* [stopLeftMotor(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#stopleftmotorvoid)
+* [stopRightMotor(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#stoprightmotorvoid)
 
 LCD RGB : 
 
@@ -18,11 +18,11 @@ LCD RGB :
 * [lcdPrint(String text)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#lcdprintstring-text)
 * [lcdPrint(float data)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#lcdprintfloat-data)
 * [setLcdCursor(uint8_t, uint8_t)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#setlcdcursoruint8_t-uint8_t)
-* [lcdHome(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#lcdhome)
-* [lcdClear(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#lcdclear)
-* [gedInfrared(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#gedinfrared)
+* [lcdHome(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#lcdhomevoid)
+* [lcdClear(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#lcdclearvoid)
+* [gedInfrared(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#gedinfraredvoid)
 * [getVoltage(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getvoltagevoid)
-* []()
+* [getBatteryLevel(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getbatterylevelvoid)
 * []()
 * []()
 * []()
