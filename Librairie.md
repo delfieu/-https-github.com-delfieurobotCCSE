@@ -414,6 +414,26 @@ void loop() {
 
 ---
 
+#### setLedBarLevel(int level)
+
+##### Paramètres : 
+##### Valeur de retour : 
+##### Exemple : 
+```c++
+```
+
+---
+
+#### getLedBarLevel(void)
+
+##### Paramètres : 
+##### Valeur de retour : 
+##### Exemple : 
+```c++
+```
+
+---
+
 #### gedInfrared(void)
 Retourne la valeur du capteur de réflectance infrarouge.
 ##### Paramètres : 
