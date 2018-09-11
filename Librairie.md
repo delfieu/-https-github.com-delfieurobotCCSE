@@ -107,11 +107,11 @@ Aucune.
 ---
 
 #### begin(void)
-Initialisation de la classe (Serial, I2C, encodeurs etc)
+Initialisation de la classe (Serial, I2C, encodeurs, etc).
 ##### Paramètres :
 Aucun.
 ##### Valeur de retour :
-bool : égale à 1 si la fonction se termine bien.
+bool : égale à 1 si la fonction s'exécute correctement.
 ##### Exemple : 
 
 ```c++
@@ -191,7 +191,7 @@ void loop() {
 ---
 
 #### stopLeftMotor(void)
-Stop le moteur gauche.
+Stoppe le moteur gauche.
 ##### Paramètres : 
 Aucun.
 ##### Valeur de retour : 
@@ -220,7 +220,7 @@ void loop() {
 ---
 
 #### stopRightMotor(void)
-Stop le moteur droit.
+Stoppe le moteur droit.
 ##### Paramètres : 
 Aucun.
 ##### Valeur de retour : 
@@ -252,8 +252,8 @@ void loop() {
 configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
 ##### Paramètres : 
 - (unsigned char) r : valeur de la composante rouge (entre 0 et 255).
-- (unsigned char) g : valeur de la composante rouge (entre 0 et 255).
-- (unsigned char) b : valeur de la composante rouge (entre 0 et 255).
+- (unsigned char) g : valeur de la composante verte (entre 0 et 255).
+- (unsigned char) b : valeur de la composante bleue (entre 0 et 255).
 ##### Valeur de retour : 
 ##### Exemple : 
 ```c++
