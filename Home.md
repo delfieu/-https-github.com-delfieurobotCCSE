@@ -1,12 +1,12 @@
 # Bienvenue dans le wiki du projet M.A.R.K ! 
-![blabla](https://dubsism.files.wordpress.com/2017/12/image-not-found.png?w=547)<br />
+<!-- ![blabla](https://dubsism.files.wordpress.com/2017/12/image-not-found.png?w=547)<br /> -->
 Ici vous trouverez le nécessaire pour programmer et customiser votre robot. <br />
 
 ## Pour bien débuter
 
 ### Prérequis : 
 
-#### IDE Arduino
+#### Installer l'IDE Arduino
 Page de téléchargement : <br />
 https://www.arduino.cc/en/Main/Software
 
@@ -15,7 +15,7 @@ https://www.arduino.cc/en/Guide/Windows<br />
 https://www.arduino.cc/en/Guide/Linux <br />
 Le paquet Arduino est également présent dans les dépôts Universe d'Ubuntu.
 
-#### M.A.R.K librairie
+#### Installer la librairie MARK
 
 1. [Télécharger le git](https://github.com/generationrobots-lab/MARK/archive/master.zip)
 2. Décompresser l'archive et placez-là où bon vous semble.
@@ -43,8 +43,9 @@ Vous trouverez des exemples dans Fichier => Carnet de croquis, ou dans le git [i
 ## Hardware
 
 ### Électronique <br />
-M.A.R.K est un robot qui se veut modulable, pour cela son électronique se base un maximum sur un maximum de capteur GROVE, qui facilite la connectique et permet la réalisation simple de prototypes. 
+M.A.R.K est un robot qui se veut modulable, pour cela son électronique se base sur un maximum de capteurs GROVE, ce qui facilite la connectique et permet la réalisation simple de prototypes. 
 
 Pour avoir plus d'informations sur le câblage du robot et sur les composants électroniques, merci de visiter [la page dédiée du wiki](https://github.com/generationrobots-lab/MARK/wiki/%C3%89lectronique).
+
 ### Mécanique
 Pour avoir plus d'informations sur la structure et sur les composants mécaniques, merci de visiter [la page dédiée du wiki](https://github.com/generationrobots-lab/MARK/wiki/M%C3%A9canique).
