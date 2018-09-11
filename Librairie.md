@@ -444,7 +444,7 @@ void loop() {
 ---
 
 #### getLedBarLevel(void)
-Retourne la dernière valeur appelé avec la fonction setLedBarLevel(int level).
+Retourne la dernière valeur appelée avec la fonction setLedBarLevel(int level).
 ##### Paramètres : 
 Aucun.
 ##### Valeur de retour : 
@@ -562,11 +562,11 @@ void loop() {
 ---
 
 #### getBumper(String side)
-Retourne la valeur d'un microswitch
+Retourne la valeur d'un microswitch.
 ##### Paramètres : 
 * (String) side : permet d'identifier sur quel bumper la mesure doit être faite. 
 ##### Valeur de retour : 
-bool : égale à 1 si le contact en présent (switch fermé).
+bool : égale à 1 si le contact est présent (switch fermé).
 ##### Exemple : 
 ```c++
 #include <MARK.h>
@@ -593,7 +593,7 @@ Retourne l'état de l'interruption.
 ##### Paramètres : 
 Aucun.
 ##### Valeur de retour : 
-bool : égale à 1 si un bumper a changé d'état
+bool : égale à 1 si un bumper a changé d'état.
 ##### Exemple : 
 ```c++
 #include <MARK.h>
@@ -679,7 +679,7 @@ Retourne la valeur sur l'axe Y du joystick.
 ##### Paramètres : 
 Aucun.
 ##### Valeur de retour : 
-int : valeur sur l'axe Y (entre ~240 et ~780)
+int : valeur sur l'axe Y (entre ~240 et ~780).
 ##### Exemple :  
 ```c++
 #include <MARK.h>
@@ -729,7 +729,7 @@ void loop() {
 ---
 
 #### setServo(int pos)
-Positionne le servo à un angle donnée.
+Positionne le servomoteur à un angle donné.
 ##### Paramètres : 
 * (int) pos : angle du servomoteur (entre 0° et 180°).
 ##### Valeur de retour : 
@@ -772,7 +772,7 @@ Retourne la valeur de l’accéléromètre sur l'axe X.
 ##### Paramètres : 
 Aucun.
 ##### Valeur de retour : 
-float : entre -1 et 1
+float : entre -1 et 1.
 ##### Exemple : 
 ```c++
 #include <MARK.h>
@@ -822,7 +822,7 @@ Retourne la valeur de l’accéléromètre sur l'axe Z.
 ##### Paramètres : 
 Aucun.
 ##### Valeur de retour : 
-float : entre -1 et 1
+float : entre -1 et 1.
 ##### Exemple : 
 ```c++
 #include <MARK.h>
@@ -847,7 +847,7 @@ Retourne la valeur du gyroscope sur l'axe X.
 ##### Paramètres : 
 Aucun.
 ##### Valeur de retour : 
-float : entre -1 et 1
+float : entre -1 et 1.
 ##### Exemple :  
 ```c++
 #include <MARK.h>
@@ -872,7 +872,7 @@ Retourne la valeur du gyroscope sur l'axe Y.
 ##### Paramètres : 
 Aucun.
 ##### Valeur de retour : 
-float : entre -1 et 1
+float : entre -1 et 1.
 ##### Exemple : 
 ```c++
 #include <MARK.h>
@@ -897,7 +897,7 @@ Retourne la valeur du gyroscope sur l'axe Z.
 ##### Paramètres : 
 Aucun.
 ##### Valeur de retour : 
-float : entre -1 et 1
+float : entre -1 et 1.
 ##### Exemple : 
 ```c++
 #include <MARK.h>
@@ -993,7 +993,7 @@ void loop() {
 ---
 
 #### displayWifiAnswer(void)
-Envoie sur le Serial la réponse du module wifi.
+Envoie sur le port série 1 (Serial 1) la réponse du module wifi.
 ##### Paramètres : 
 Aucun.
 ##### Valeur de retour : 
