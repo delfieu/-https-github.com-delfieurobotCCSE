@@ -102,7 +102,13 @@ Destructeur.
 Aucun.
 ##### Valeur de retour :
 Aucune.
+##### Exemple : 
 
+```c++
+#include <MARK.h>
+MARK myrobot; 
+myrobot.~MARK(); //Destructor
+```
 
 ---
 
@@ -134,7 +140,7 @@ void loop() {
 #### setLeftMotor(int speed)
 Configure la vitesse du moteur gauche.
 ##### Paramètres : 
-- speed : vitesse du moteur ( entre -100 et 100 , 0 arrête le moteur).
+- (int) speed : vitesse du moteur. Les nombres negatifs font tourner le moteur vers l'arrière (de -1 à -100), les nombre positifs vont faire tourner le moteur vers l'avant (de 1 à 100) et 0 fait arrêter le moteur..
 ##### Valeur de retour : 
 Aucune.
 ##### Exemple : 
@@ -164,7 +170,7 @@ void loop() {
 #### setRightMotor(int speed)
 Configure la vitesse du moteur droit.
 ##### Paramètres : 
-- speed : vitesse du moteur ( entre -100 et 100 , 0 arrête le moteur).
+- (int) speed : vitesse du moteur. Les nombres negatifs font tourner le moteur vers l'arrière (de -1 à -100), les nombre positifs vont faire tourner le moteur vers l'avant (de 1 à 100) et 0 fait arrêter le moteur..
 ##### Valeur de retour : 
 Aucune.
 ##### Exemple : 
@@ -249,12 +255,13 @@ void loop() {
 ---
 
 #### setLcdRGB(unsigned char r, unsigned char g, unsigned char b)
-configure la vitesse du moteur gauche (-100 < _speed < 100 , 0 = stop).
+Configure la couleur de l'écran. 
 ##### Paramètres : 
 - (unsigned char) r : valeur de la composante rouge (entre 0 et 255).
 - (unsigned char) g : valeur de la composante verte (entre 0 et 255).
 - (unsigned char) b : valeur de la composante bleue (entre 0 et 255).
 ##### Valeur de retour : 
+Aucune.
 ##### Exemple : 
 ```c++
 #include <MARK.h>
@@ -279,7 +286,7 @@ void loop() {
 #### lcdPrint(String text)
 Affiche le texte à la position du curseur.
 ##### Paramètres : 
-- text : chaîne de caractères à afficher (type String).
+- (String) text : chaîne de caractères à afficher.
 ##### Valeur de retour : 
 Aucune.
 ##### exemple : 
@@ -305,7 +312,7 @@ void loop() {
 #### lcdPrint(float data)
 Affiche le nombre à la position du curseur.
 ##### Paramètres : 
-- data: nombre (type float).
+- (float) data: nombre à afficher.
 ##### Valeur de retour : 
 Aucune.
 ##### Exemple : 
@@ -419,7 +426,7 @@ void loop() {
 #### setLedBarLevel(int level)
 Allume la barre de led. 
 ##### Paramètres : 
-* level : le niveau de la barre de led (0 => éteint, 10 => tout est allumé) (type int).
+* (int) level : le niveau de la barre de led (0 => éteint, 10 => tout est allumé).
 ##### Valeur de retour : 
 Aucune.
 ##### Exemple : 
@@ -444,7 +451,7 @@ void loop() {
 ---
 
 #### getLedBarLevel(void)
-Retourne la dernière valeur appelée avec la fonction setLedBarLevel(int level).
+Retourne la dernière valeur appelée avec la fonction setLedBarLevel.
 ##### Paramètres : 
 Aucun.
 ##### Valeur de retour : 
@@ -630,7 +637,7 @@ MARK myrobot;
 
 void setup() {
   myrobot.begin();
-   myrobot.setRightMotor(50);
+  myrobot.setRightMotor(50);
   myrobot.setLeftMotor(50);
 }
 
@@ -745,14 +752,14 @@ void setup() {
 } 
 
 void loop() {
-myrobot.setServo(0);
-delay(1000);
-myrobot.setServo(80);
-delay(1000);
-myrobot.setServo(160);
-delay(1000);
-myrobot.setServo(80);
-delay(1000);
+  myrobot.setServo(0);
+  delay(1000);
+  myrobot.setServo(80);
+  delay(1000);
+  myrobot.setServo(160);
+  delay(1000);
+  myrobot.setServo(80);
+  delay(1000);
 }
 ```
 
@@ -945,7 +952,7 @@ void loop() {
 #### sendWifiCmd(char *cmd)
 Envoie une commande au module wifi.
 ##### Paramètres : 
-(char) *cmd : commande à envoyer.
+ * (char) cmd : commande à envoyer.
 ##### Valeur de retour : 
 Aucune.
 ##### Exemple : 
