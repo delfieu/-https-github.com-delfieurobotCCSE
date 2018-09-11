@@ -1,5 +1,5 @@
 # Bienvenue dans le wiki du projet M.A.R.K ! 
-img ?
+![blabla](https://dubsism.files.wordpress.com/2017/12/image-not-found.png?w=547)<br />
 Ici vous trouverez le nécessaire pour programmer et customiser votre robot. <br />
 
 ## Pour bien commencer 
