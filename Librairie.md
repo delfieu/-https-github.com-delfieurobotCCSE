@@ -36,7 +36,7 @@ Diviseur de tension :
 * [getVoltage(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getvoltagevoid)
 * [getBatteryLevel(void)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getbatterylevelvoid)
 
-Ultrason : 
+Capteurs à ultrasons : 
 
 * [getUsDist(String pos)](https://github.com/generationrobots-lab/MARK/wiki/Librairie#getusdiststring-pos)
 
