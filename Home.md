@@ -25,9 +25,8 @@ Le paquet Arduino est également présent dans les dépôts Universe d'Ubuntu.
 
 Il est également possible de fusionner le dossier Software avec le dossier que vous utilisez déjà (par defaut C:\Users\..\Documents\Arduino).
 
-## Software
+## La librairie M.A.R.K
 
-### La librairie M.A.R.K
 La librairie que nous vous proposons permet de simplifier l'utilisation des capteurs vendus avec le robot. Merci de vous rendre sur [la page "Librairie"](https://github.com/generationrobots-lab/MARK/wiki/Librairie) pour plus d'informations sur les fonctions.
 ### Les librairies sources
 Vous pouvez également programmer votre Arduino Mega de A à Z, comme vous le souhaitez et optimiser ainsi votre code. Voici quelques pistes par où commencer : 
