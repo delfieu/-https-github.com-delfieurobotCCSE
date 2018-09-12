@@ -1,5 +1,5 @@
 * [Home](https://github.com/generationrobots-lab/MARK/wiki)
-* [Software](https://github.com/generationrobots-lab/MARK/wiki/Librairie)
+* [Librairie](https://github.com/generationrobots-lab/MARK/wiki/Librairie)
 * [Hardware](https://github.com/generationrobots-lab/MARK/wiki/Hardware)
   * [Mécanique](https://github.com/generationrobots-lab/MARK/wiki/M%C3%A9canique)
   * [Electronique](https://github.com/generationrobots-lab/MARK/wiki/%C3%89lectronique)
