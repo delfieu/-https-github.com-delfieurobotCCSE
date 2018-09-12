@@ -111,19 +111,19 @@
 | OUT B | D18 | - |
 | OUT A | - | D29 |
 | VCC | VCC | - |
-| M1 | - | - |
-| M2 | - | - |
+| M1 | - | M1- |
+| M2 | - | M1+ |
 
 ### Encodeur droit
 
-| Encodeur | Grove Shield | Arduino Mega |
-|:-:|:-:|:-:|
-| GND | GND | - |
-| OUT B | - | D27 |
-| OUT A | D19 | - |
-| VCC | VCC | - |
-| M1 | - | - |
-| M2 | - | - |
+| Encodeur | Grove Shield | Arduino Mega | Carte de contrôle des moteurs
+|:-:|:-:|:-:|:-:|
+| GND | GND | - | - |
+| OUT B | - | D27 | - |
+| OUT A | D19 | - | - |
+| VCC | VCC | - | - |
+| M1 | - | - | M2+ |
+| M2 | - | - | M2- |
 
 
 ### Bumper droit
