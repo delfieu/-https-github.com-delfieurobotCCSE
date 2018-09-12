@@ -8,86 +8,148 @@
 |:-:|:-:|
 | GND | GND |
 | VCC | VCC |
-| WHITE | D1|
-| YELLOW | D2 |
+| WHITE | NC|
+| YELLOW | D8 |
 
-### CPNT
+### Ultrason arrière
 
-| CPNT| Grove Shield | 
+| Ultrason| Grove Shield | 
 |:-:|:-:|
 | GND | GND |
 | VCC | VCC |
-| WHITE | XX|
-| YELLOW | XX |
+| WHITE | NC|
+| YELLOW | D10 |
 
-### CPNT
+### LCD RGB
 
-| CPNT| Grove Shield | 
+| LCD RGB| Grove Shield | 
 |:-:|:-:|
 | GND | GND |
 | VCC | VCC |
-| WHITE | XX|
-| YELLOW | XX |
+| WHITE | SDA|
+| YELLOW | SCL |
 
-### CPNT
+### Joystick
 
-| CPNT| Grove Shield | 
+| Joystick| Grove Shield | 
 |:-:|:-:|
 | GND | GND |
 | VCC | VCC |
-| WHITE | XX|
-| YELLOW | XX |
+| WHITE | A3|
+| YELLOW | A2 |
 
-### CPNT
+### Barre de leds
 
-| CPNT| Grove Shield | 
+| Barre de leds| Grove Shield | 
 |:-:|:-:|
 | GND | GND |
 | VCC | VCC |
-| WHITE | XX|
-| YELLOW | XX |
+| WHITE | D5|
+| YELLOW | D4 |
 
-### CPNT
+### Accéléromètre 
 
-| CPNT| Grove Shield | 
+| Accéléromètre | Grove Shield | 
 |:-:|:-:|
 | GND | GND |
 | VCC | VCC |
-| WHITE | XX|
-| YELLOW | XX |
+| WHITE | SDA|
+| YELLOW | SCL |
 
-### CPNT
+### Module wifi
 
-| CPNT| Grove Shield | 
+| Module wifi| Grove Shield | 
 |:-:|:-:|
 | GND | GND |
 | VCC | VCC |
-| WHITE | XX|
-| YELLOW | XX |
+| WHITE | D14/TX3|
+| YELLOW | D15/RX3 |
 
-### CPNT
+### Carte de contrôle des moteurs
 
-| CPNT| Grove Shield | 
+| Carte de contrôle des moteurs| Grove Shield | 
 |:-:|:-:|
 | GND | GND |
 | VCC | VCC |
-| WHITE | XX|
-| YELLOW | XX |
+| WHITE | SDA |
+| YELLOW | SCL |
 
-### CPNT
+### Diviseur de tension
 
-| CPNT| Grove Shield | 
+| Diviseur de tension| Grove Shield | 
 |:-:|:-:|
 | GND | GND |
 | VCC | VCC |
-| WHITE | XX|
-| YELLOW | XX |
+| WHITE | NC |
+| YELLOW | A0 |
 
-### CPNT
+### Capteur de réflectance infrarouge
 
-| CPNT| Grove Shield | 
+| Capteur de réflectance infrarouge| Grove Shield | 
 |:-:|:-:|
 | GND | GND |
 | VCC | VCC |
-| WHITE | XX|
-| YELLOW | XX |
+| WHITE | NC |
+| YELLOW | D6 |
+
+## Autre
+
+### Servomoteur
+
+| Servomoteur| Grove Shield | 
+|:-:|:-:|
+| GND | GND |
+| VCC | VCC |
+| WHITE | PWM D12|
+
+
+### Encodeur gauche
+
+| Encodeur | Grove Shield | Arduino Mega |
+|:-:|:-:|:-:|
+| GND | GND | - |
+| OUT B | D18 | - |
+| OUT A | - | D29 |
+| VCC | VCC | - |
+| M1 | - | - |
+| M2 | - | - |
+
+### Encodeur droit
+
+| Encodeur | Grove Shield | Arduino Mega |
+|:-:|:-:|:-:|
+| GND | GND | - |
+| OUT B | - | D27 |
+| OUT A | D19 | - |
+| VCC | VCC | - |
+| M1 | - | - |
+| M2 | - | - |
+
+
+### Bumper droit
+
+| Bumper droit | Grove Shield | 
+|:-:|:-:|
+| GND | GND |
+| OUT | D3 |
+
+### Bumper gauche
+
+| Bumper gauche | Grove Shield | 
+|:-:|:-:|
+| GND | GND |
+| OUT | D2 |
+
+## Que reste-t-il de libre ? 
+
+* A1 
+* A4 -> A15
+* D7
+* D9
+* D11
+* D13
+* D16
+* D17
+* D22 -> D26
+* D28
+* D30 -> D53
