@@ -20,15 +20,16 @@ Le paquet Arduino est également présent dans les dépôts Universe d'Ubuntu.
 1. [Télécharger le git](https://github.com/generationrobots-lab/MARK/archive/master.zip)
 2. Décompresser l'archive et placez-là où bon vous semble.
 3. Lancer l'IDE Arduino 
-4. Dans Fichier => Préférences => dans l'onglet Paramètres, le champ "Emplacement du carnet de croquis" doit pointer vers le dossier "Software" de l'archive fraichement décompressée et rangée (exemple : D:\MARK-master\Software)
-5. Dans l'IDE Arduino, vous devriez voir apparaitre dans Ficher => Carnet de croquis les exemples pour débuter avec votre M.A.R.K.
+4. Dans `Fichier => Préférences => Paramètres`, le champ "Emplacement du carnet de croquis" doit pointer vers le dossier "Software" de l'archive fraichement décompressée et rangée (exemple : D:\MARK-master\Software)
+5. Dans l'IDE Arduino, vous devriez voir apparaître dans `Ficher => exemples => MARK` les exemples pour débuter avec votre M.A.R.K.
 
 Il est également possible de fusionner le dossier Software avec le dossier que vous utilisez déjà (par defaut C:\Users\..\Documents\Arduino).
 
 ## La librairie M.A.R.K
 
 La librairie que nous vous proposons permet de simplifier l'utilisation des capteurs vendus avec le robot. Merci de vous rendre sur [la page "Librairie"](https://github.com/generationrobots-lab/MARK/wiki/Librairie) pour plus d'informations sur les fonctions.
-### Les librairies sources
+
+## Les librairies sources
 Vous pouvez également programmer votre Arduino Mega de A à Z, comme vous le souhaitez et optimiser ainsi votre code. Voici quelques pistes par où commencer : 
 * [Accelerometre](https://github.com/generationrobots-lab/MARK/tree/master/Software/libraries/Accelerometer_And_Gyroscope_LSM6DS3-master)
 * [Encodeurs](https://github.com/generationrobots-lab/MARK/tree/master/Software/libraries/Encoder-master)
@@ -37,7 +38,7 @@ Vous pouvez également programmer votre Arduino Mega de A à Z, comme vous le so
 * [LED bar](https://github.com/generationrobots-lab/MARK/tree/master/Software/libraries/Grove_LED_Bar-master)
 * [Ultrasonic ranger](https://github.com/generationrobots-lab/MARK/tree/master/Software/libraries/Grove_Ultrasonic_Ranger-master)
 
-Vous trouverez des exemples dans Fichier => exemples => MARK, ou dans le git [ici](https://github.com/generationrobots-lab/MARK/tree/master/software/libraries/MARK/examples). 
+Vous trouverez des exemples dans `Fichier => carnet de croquis`, ou dans le git [ici](https://github.com/generationrobots-lab/MARK/tree/master/software). 
 
 ## Hardware
 
