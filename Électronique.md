@@ -1,6 +1,6 @@
-# M.A.R.K : l'électronique !
-
-## Composants Grove:
+# M.A.R.K : l'électronique.
+Cett
+## Connexion des modules :
 
 ### Ultrason avant
 
@@ -105,18 +105,18 @@
 
 ### Encodeur gauche
 
-| Encodeur | Grove Shield | Arduino Mega |
-|:-:|:-:|:-:|
-| GND | GND | - |
-| OUT B | D18 | - |
-| OUT A | - | D29 |
-| VCC | VCC | - |
-| M1 | - | M1- |
-| M2 | - | M1+ |
+| Encodeur | Grove Shield | Arduino Mega | Carte de contrôle des moteurs |
+|:-:|:-:|:-:|:-:|
+| GND | GND | - | - |
+| OUT B | D18 | - | - |
+| OUT A | - | D29 | - |
+| VCC | VCC | - | - |
+| M1 | - | - | M1- |
+| M2 | - | - | M1+ |
 
 ### Encodeur droit
 
-| Encodeur | Grove Shield | Arduino Mega | Carte de contrôle des moteurs
+| Encodeur | Grove Shield | Arduino Mega | Carte de contrôle des moteurs |
 |:-:|:-:|:-:|:-:|
 | GND | GND | - | - |
 | OUT B | - | D27 | - |
