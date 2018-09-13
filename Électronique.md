@@ -1,4 +1,4 @@
-<h1 align="center"># M.A.R.K : l'électronique.</h1>
+<h1 align="center">M.A.R.K : l'électronique.</h1>
 
 ## Connexion des modules : 
 
