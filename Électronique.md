@@ -105,6 +105,10 @@
 
 ### Encodeur gauche
 
+Rappel :
+
+<img src="https://a.pololu-files.com/picture/0J5827.250.jpg?da2069a81e22a2db8682c638fbfeff4f" width="120">
+
 | Encodeur | Grove Shield | Arduino Mega | Carte de contrôle des moteurs |
 |:-:|:-:|:-:|:-:|
 | GND | GND | - | - |
@@ -115,6 +119,10 @@
 | M2 | - | - | M1+ |
 
 ### Encodeur droit
+
+Rappel : 
+
+<img src="https://a.pololu-files.com/picture/0J5827.250.jpg?da2069a81e22a2db8682c638fbfeff4f" width="120">
 
 | Encodeur | Grove Shield | Arduino Mega | Carte de contrôle des moteurs |
 |:-:|:-:|:-:|:-:|
