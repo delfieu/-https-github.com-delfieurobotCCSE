@@ -37,7 +37,7 @@ Vous pouvez également programmer votre Arduino Mega de A à Z, comme vous le so
 * [LED bar](https://github.com/generationrobots-lab/MARK/tree/master/Software/libraries/Grove_LED_Bar-master)
 * [Ultrasonic ranger](https://github.com/generationrobots-lab/MARK/tree/master/Software/libraries/Grove_Ultrasonic_Ranger-master)
 
-Vous trouverez des exemples dans Fichier => Carnet de croquis, ou dans le git [ici](https://github.com/generationrobots-lab/MARK/tree/master/Software). 
+Vous trouverez des exemples dans Fichier => exemples => MARK, ou dans le git [ici](https://github.com/generationrobots-lab/MARK/tree/master/software/libraries/MARK/examples). 
 
 ## Hardware
 
