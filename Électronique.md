@@ -1,6 +1,6 @@
 # M.A.R.K : l'électronique.
-Cett
-## Connexion des modules :
+
+## Connexion des modules : 
 
 ### Ultrason avant
 
