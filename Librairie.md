@@ -140,7 +140,7 @@ void loop() {
 #### setLeftMotor(int speed)
 Configure la vitesse du moteur gauche.
 ##### Paramètres : 
-- (int) speed : vitesse du moteur. Les nombres negatifs font tourner le moteur vers l'arrière (de -1 à -100), les nombre positifs vont faire tourner le moteur vers l'avant (de 1 à 100) et 0 fait arrêter le moteur..
+- (int) speed : vitesse du moteur. Les nombres négatifs font tourner le moteur vers l'arrière (de -1 à -100), les nombres positifs font tourner le moteur vers l'avant (de 1 à 100) et 0 fait arrêter le moteur.
 ##### Valeur de retour : 
 Aucune.
 ##### Exemple : 
@@ -170,7 +170,7 @@ void loop() {
 #### setRightMotor(int speed)
 Configure la vitesse du moteur droit.
 ##### Paramètres : 
-- (int) speed : vitesse du moteur. Les nombres negatifs font tourner le moteur vers l'arrière (de -1 à -100), les nombre positifs vont faire tourner le moteur vers l'avant (de 1 à 100) et 0 fait arrêter le moteur..
+- (int) speed : vitesse du moteur. Les nombres négatifs font tourner le moteur vers l'arrière (de -1 à -100), les nombres positifs font tourner le moteur vers l'avant (de 1 à 100) et 0 fait arrêter le moteur.
 ##### Valeur de retour : 
 Aucune.
 ##### Exemple : 
@@ -339,7 +339,7 @@ void loop() {
 #### setLcdCursor(uint8_t, uint8_t)
 Positionne le curseur de l'écran. 
 ##### Paramètres : 
-- (colonne, ligne). L'écran contient 16 colonnes (de 0 à 15) et 2 lignes (de 0 à 1), (0,0) étant le coin en haut a gauche.
+- (colonne, ligne). L'écran contient 16 colonnes (de 0 à 15) et 2 lignes (de 0 à 1), (0,0) étant le coin supérieur gauche.
 ##### Valeur de retour : 
 Aucune
 ##### Exemple : 
@@ -975,7 +975,7 @@ void loop() {
 ---
 
 #### waitWifiResult(void)
-fonction bloquante qui attend la réponse du module wifi.
+Fonction bloquante qui attend la réponse du module wifi.
 ##### Paramètres : 
 Aucun.
 ##### Valeur de retour : 
@@ -1025,7 +1025,7 @@ void loop() {
 ---
 
 #### getEncoder(String side)
-retourne la valeur de l'encodeur choisi. 
+Retourne la valeur de l'encodeur choisi. 
 ##### Paramètres : 
 (String) side : côté de l'encodeur ("right" ou "left").
 ##### Valeur de retour : 
