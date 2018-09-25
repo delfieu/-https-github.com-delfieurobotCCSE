@@ -1,4 +1,4 @@
-# Bienvenue dans le wiki du projet M.A.R.K ! 
+# Bienvenue dans le wiki du projet M.A.R.K (Modular Robot Arduino Kit) ! 
 <!-- ![blabla](https://dubsism.files.wordpress.com/2017/12/image-not-found.png?w=547)<br /> -->
 Vous trouverez ici tout le nécessaire pour programmer et customiser votre robot. <br />
 
