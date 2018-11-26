@@ -31,12 +31,12 @@ La librairie que nous vous proposons permet de simplifier l'utilisation des capt
 
 ## Les librairies sources
 Vous pouvez également programmer votre Arduino Mega de A à Z, comme vous le souhaitez, et optimiser ainsi votre code. Voici quelques pistes pour commencer : 
-* [Accéléromètre](https://github.com/generationrobots-lab/MARK/tree/master/Software/libraries/Accelerometer_And_Gyroscope_LSM6DS3-master)
-* [Encodeurs](https://github.com/generationrobots-lab/MARK/tree/master/Software/libraries/Encoder-master)
-* [Motor driver](https://github.com/generationrobots-lab/MARK/tree/master/Software/libraries/Grove_I2C_Motor_Driver_v1_3-master)
-* [LCD RGB](https://github.com/generationrobots-lab/MARK/tree/master/Software/libraries/Grove_LCD_RGB_Backlight-master)
-* [LED bar](https://github.com/generationrobots-lab/MARK/tree/master/Software/libraries/Grove_LED_Bar-master)
-* [Capteur à ultrasons](https://github.com/generationrobots-lab/MARK/tree/master/Software/libraries/Grove_Ultrasonic_Ranger-master)
+* [Accéléromètre](https://github.com/generationrobots-lab/MARK/tree/master/software/libraries/Accelerometer_And_Gyroscope_LSM6DS3-master)
+* [Encodeurs](https://github.com/generationrobots-lab/MARK/tree/master/software/libraries/Encoder-master)
+* [Motor driver](https://github.com/generationrobots-lab/MARK/tree/master/software/libraries/Grove_I2C_Motor_Driver_v1_3-master)
+* [LCD RGB](https://github.com/generationrobots-lab/MARK/tree/master/software/libraries/Grove_LCD_RGB_Backlight-master)
+* [LED bar](https://github.com/generationrobots-lab/MARK/tree/master/software/libraries/Grove_LED_Bar-master)
+* [Capteur à ultrasons](https://github.com/generationrobots-lab/MARK/tree/master/software/libraries/Grove_Ultrasonic_Ranger-master)
 
 Vous trouverez des exemples dans `Fichier => Carnet de croquis`, ou dans le git [ici](https://github.com/generationrobots-lab/MARK/tree/master/software). 
 
