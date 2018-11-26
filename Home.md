@@ -47,5 +47,7 @@ M.A.R.K est un robot qui se veut modulable, pour cela son électronique se base 
 
 Pour avoir plus d'informations sur le câblage du robot et sur les composants électroniques, merci de visiter [la page dédiée du wiki](https://github.com/generationrobots-lab/MARK/wiki/%C3%89lectronique).
 
+<!---
 ### Mécanique
 Pour avoir plus d'informations sur la structure et sur les composants mécaniques, merci de visiter [la page dédiée du wiki](https://github.com/generationrobots-lab/MARK/wiki/M%C3%A9canique).
+-->
