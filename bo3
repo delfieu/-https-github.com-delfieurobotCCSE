@@ -1,0 +1,135 @@
+//+ Marche avec un peu trop d'oscillation dans le couloir
+//+ Virage différenciel final
+//- manque asservissemnt mur droit
+#include <Wire.h>
+#include <Servo.h>
+#include "rgb_lcd.h"
+#include "Ultrasonic.h"
+#include "Grove_I2C_Motor_Driver.h"
+
+#define Del 800
+
+#define I2C_ADDRESS 0x0f
+
+#define Gauche 0
+#define Droite 180
+#define Calibration 5
+#define Face 90
+#define Unit 730
+#define UnitAgulaire 8
+#define Thash 5000  // 250 micro-sec
+#define LedToggle digitalWrite (Led, !digitalRead(Led))
+#define Nmes 5  // on fait 5 mesures ==> Tous les 45 degrés
+#define TServo 1200 // temps approximatif (ms)  que met le servo pour faire 180 degrés
+
+#define Vcour 70
+
+#define Gauche 0
+#define Droite 180
+#define Face 90
+#define BG 2
+#define BD 3
+#define Couloir 156
+#define seuilFace 40
+#define seuilMur 40
+#define Loin 100
+
+const byte Led = 13; // LED du module
+volatile int F,R,L,Compteur = 0;  //Compteur pour interruption
+volatile byte dir;
+
+Servo myservo;
+rgb_lcd lcd;
+Ultrasonic Front(8); //Init of ultrasonic sensor on pin 8
+Ultrasonic Right(10); //Init of ultrasonic sensor on pin 10
+Ultrasonic Left(2); //Init of ultrasonic sensor on pin 2
+volatile boolean avance,tourne,recule,bump,bd,bg;
+volatile byte deviation,temps;
+
+
+void configTimer2(){
+  TCCR2A = 0;          // Mode normal
+  TCCR2B = (1<<CS22) + (1<<CS21) ; // clkio/256 est incrémenté toutes les 16uS  
+  TIMSK2 = 1<<TOIE2; // TOIE2   
+}
+
+void Deplace(int V){
+  avance=true;
+  tourne=false;
+  recule=false;
+  Motor.speed(MOTOR1, V+Calibration);
+  Motor.speed(MOTOR2, V);
+}
+
+void Devier(int sens, int diff){
+  avance=true;
+  tourne=false;
+  recule=false;
+  if (sens==Droite) {Motor.speed(MOTOR1,Vcour);Motor.speed(MOTOR2,Vcour-diff);}
+  else {Motor.speed(MOTOR1,Vcour-diff);Motor.speed(MOTOR2,Vcour);}
+}
+
+void Tourne(int dir, int diff){
+  tourne=true;
+  recule=false;
+  avance=false;
+  if (dir == Droite) { Motor.speed(MOTOR1,Vcour);Motor.speed(MOTOR2,diff);}
+  else {Motor.speed(MOTOR1,diff);Motor.speed(MOTOR2,Vcour);}  
+}
+
+ISR (TIMER2_OVF_vect) { 
+  TCNT2 = 0;
+  if (tourne) {
+    avance=false;
+    temps++;
+    if (temps == 155) {temps=0;tourne=false;}
+  }    
+  else {
+  switch(Compteur) {  //X*4mS = ?? 
+      case 50 :   F=Front.MeasureInCentimeters(); break;
+      case 100 :  R=Right.MeasureInCentimeters(); break;
+      case 150 :  L=Left.MeasureInCentimeters(); Compteur =0;avance=false;break;
+      default : break;
+   }  
+   Compteur++;
+   recule=false;
+   tourne=false;
+  }
+} 
+
+void setup() {
+  dir=0;deviation=0;
+  avance=true;
+  tourne=false;
+  bump=false;
+  L=100;R=100;F=100;
+  myservo.attach(12); //Connect servo to pin 8
+  myservo.write(90);
+  Motor.begin(I2C_ADDRESS);
+  Motor.stop(MOTOR1);
+  Motor.stop(MOTOR2);
+  configTimer2();
+  Deplace(Vcour);
+  sei();
+}
+
+void loop() {
+    Deplace(Vcour);
+    if (F   <  seuilFace) Tourne(Gauche,-Vcour);
+    if (R   >  Loin) Tourne(Droite,Vcour/12);
+    if (R   <  seuilMur) Devier(Gauche, seuilMur);
+    if (R   <  seuilMur) Devier(Gauche, seuilMur);
+    if (L   <  seuilMur) Devier(Droite, seuilMur);
+//    if ((R-L >  seuilMur) && (R-L < seuilMur*2)) Devier(Droite, R-L); // trop pres du mur gauche
+//    if ((L-R >  seuilMur) && (R-L < seuilMur*2)) Devier(Gauche, L-R); // trop pres du mur droite
+}
+
+void rightCB() {
+ Motor.stop(MOTOR1);
+ Motor.stop(MOTOR2);while(1);
+}
+
+void leftCB() {
+  Motor.stop(MOTOR1);
+  Motor.stop(MOTOR2);while(1);
+}
